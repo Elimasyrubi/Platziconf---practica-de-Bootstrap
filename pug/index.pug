@@ -1,0 +1,143 @@
+extend componentes/plantilla.pug
+block contenido
+	main#main
+		.carousel.slide.carousel-fade(id="carousel" data-ride="carousel" data-pause="false")
+			.carousel-inner
+				.carousel-item.active
+					img(src="../recursos/images/hawaii.jpg" class="d-block w-100" alt="hawaii")
+				.carousel-item
+					img(src="../recursos/images/hawaii2.jpg" class="d-block w-100" alt="hawaii")
+				.carousel-item
+					img(src="../recursos/images/hawaii3.jpeg" class="d-block w-100" alt="hawaii")
+				.overlay
+					.container
+						.row.align-items-center
+							.col-md-6.offset-md-6.text-center.text-md-right
+								h1 Platzo Conf Hawaii
+								p.d-none.d-md-block Platzi Conf llega por pimera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del Team Platzi, a otros estudiantes de Platzi y a los oradores de primer nivel que tenemos para ti. Te esperamos!
+								a.btn.btn-outline-light(href="#") Quiero ser orador
+								button.btn.btn-platzi(type="button" data-toggle="modal" data-target="#modal-compra") Comprar tickets
+
+	section#speakers.mt-4.mb-4
+		.container
+			.row
+				.col.text-center.text-uppercase
+					small Conoce a los
+					h2 Oradores
+			.row
+				.col-12.col-md-6.col-lg-4.mb-4
+					<div class="card">
+						<img src="../recursos/speakers/sacha.jpg" class="card-img-top" alt="...">
+						<div class="card-body">
+							.badges
+								<span class="badge badge-warning">JavaScrip</span>
+								<span class="badge badge-info">React</span>
+							<h5 class="card-title mb-0">Sacha</h5>
+							<p class="card-text mt-2">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus..</p>
+						</div>
+					</div>
+				.col-12.col-md-6.col-lg-4.mb-4
+					<div class="card">
+						<img src="../recursos/speakers/leonidas2.jpeg" class="card-img-top" alt="...">
+						<div class="card-body">
+							.badges
+								<span class="badge badge-warning">JavaScrip</span>
+								<span class="badge badge-info">React</span>
+							<h5 class="card-title mb-0">Leonidas Esteban</h5>
+							<p class="card-text mt-2">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus..</p>
+						</div>
+					</div>
+				.col-12.col-md-6.col-lg-4.mb-4
+					<div class="card">
+						<img src="../recursos/speakers/freddy.jpeg" class="card-img-top" alt="...">
+						<div class="card-body">
+						.badges
+							<span class="badge badge-secondary">Negocios</span>
+							<span class="badge badge-danger">Startuos</span>
+							<h5 class="card-title mb-0">Freddy Vegas</h5>
+							<p class="card-text mt-2">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus..</p>
+						</div>
+					</div>
+				.col-12.col-md-6.col-lg-4.mb-4
+					<div class="card">
+						<img src="../recursos/speakers/cvander.jpeg" class="card-img-top" alt="...">
+						<div class="card-body">
+							.badges
+								<span class="badge badge-secondary">Negocios</span>
+								<span class="badge badge-danger">Startuos</span>
+							<h5 class="card-title mb-0">Christian Van Der H.</h5>
+							<p class="card-text mt-2">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus..</p>
+						</div>
+					</div>
+
+	section#place-time.mb-4
+		.conatiner-fluid
+			.row
+				.col-12.col-lg-6.pl-0.pr-0
+					img(src="../recursos/images/honolulu.jpg", alt=" honolulu")
+				.col-12.col-lg-6.pt-4.pb-4
+					h2 Honolulu - Octubre 2025
+					p Honolulu o Honolulú​ es la capital y localidad más grande del estado de Hawái, en los Estados Unidos. Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).
+					a.btn.btn-outline-light conoce mas
+
+	section#conviertete-en-orador
+		.container
+			.row
+				.col.text-center.text-uppercase
+					small Cnviertete en un
+					h2 Orador
+			.row
+				.col.text-center
+					p Anótate como orador para dar una charla <abbr data-toggle="tolltip" title="charlas de 5 min">ignite</abbr>. Cuéntanos de qué quieres hablar!
+			.row 
+				.col.col-md-10.col-lg-8.offset-md-1.offset-lg-2
+					<form>
+						<div class="form-row">
+							<div class="form-group col-12 col-md-6">
+								<input type="text" class="form-control" placeholder="Nombre">
+							</div>
+							<div class="form-group col-12 col-md-6">
+								<input type="text" class="form-control" placeholder="Apellido">
+							</div>
+						</div>
+						.form-row
+							.col.form-group
+								textarea(name="text",  placeholder="¿Sobre qué quieres hablar?").form-control.form-control-lg
+								small.form-text.text-muted Recuerda incluir un titulo a la Charla
+						.form-row
+							.col
+								button(type="button").btn.btn-success.btn-block.btn-platzi Enviar
+					</form>
+	<!-- Modal -->
+	<div class="modal fade" id="modal-compra" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-scrollable" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalScrollableTitle">Comprar Tickes</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					form(action="")
+						.form-row
+							.form-group.col
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">@</span>
+									</div>
+									<input type="text" class="form-control" placeholder="Nombre de Usuario" aria-label="Username" aria-describedby="basic-addon1">
+								</div>
+					<div class="alert alert-warning" role="alert">
+						A Recibiras un Correo de confirmación
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn btn-platzi">comprar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
